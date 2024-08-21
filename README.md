@@ -8,3 +8,4 @@ This project is **My Personal Portfolio** with some information, experiences, sk
 - CSS
 - JavaScript
 - Responsive Design
+- Static Forms API.
