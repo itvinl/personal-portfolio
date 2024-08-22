@@ -857,7 +857,7 @@ form button:hover {
 }
 
 .Text-404 {
-    font-size: 190px;
+    font-size: 150px;
     letter-spacing: -1px;
     font-weight: 800;
     background: linear-gradient(90deg, #E6B980 31%, #FFFFFF 100%);
@@ -874,20 +874,20 @@ form button:hover {
 
 .Text-NotFound {
     display: block;
-    font-weight: 400;
-    font-size: 28px;
+    font-weight: 300;
+    font-size: 25px;
     color: #F0F0F0;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .Btn-GoHome {
-    width: 90px;
+    width: 85px;
     height: 30px;
     background: #E6B980;
     border: 1px solid #000;
     border-radius: 10px;
     font-weight: 900;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 0px;
     color: #000;
     cursor: pointer;
@@ -1158,17 +1158,18 @@ form button:hover {
 
     /* Error 404 */
     .Text-404 {
-        font-size: 150px;
+        font-size: 130px;
     }
 
     .Text-NotFound {
-        font-size: 22px;
+        font-size: 21px;
+        margin-bottom: 50px;
     }
 
     .Btn-GoHome {
-        font-size: 12px;
-        width: 85px;
-        height: 28px;
+        font-size: 11px;
+        width: 75px;
+        height: 25px;
     }
 }
 
@@ -1480,13 +1481,13 @@ form button:hover {
 
     .Text-NotFound {
         font-size: 16px;
+        margin-bottom: 30px;
     }
 
     .Btn-GoHome {
-        font-size: 11px;
-        width: 77px;
-        height: 26px;
-        margin-top: 40px;
+        font-size: 10px;
+        width: 70px;
+        height: 24px;
     }
 }
 
