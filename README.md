@@ -1,6 +1,6 @@
 ### 💻 Project Description
 
-This project is **My Personal Portfolio** with some information, experiences, skills and projects about myself.
+This project is **My Personal Portfolio** with some information, experiences, skills, services and projects about myself.
 
 ### ⚒️ Technologies Used ⚒️
 
