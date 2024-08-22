@@ -877,12 +877,12 @@ form button:hover {
     font-weight: 400;
     font-size: 28px;
     color: #F0F0F0;
+    margin-bottom: 70px;
 }
 
 .Btn-GoHome {
     width: 90px;
     height: 30px;
-    margin-top: 70px;
     background: #E6B980;
     border: 1px solid #000;
     border-radius: 10px;
