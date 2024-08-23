@@ -43,16 +43,60 @@
                             WordPress, Photoshop, Figma, UX/UI Design, Front-End and 
                             Back-End Programming.
                         </p>
+
+                        <h2 class="Education-Cap"><i class="fa-solid fa-graduation-cap"></i></i>Education</h2>
+                        <h3>Systems Development & Analysis</h3>
+                        <p class="Education-Name">Universidade Paulista - UNIP</p>
+                        <p class="Education-Data"><span class="Calendar">2020 - 2021</span></p>
                         
                         <h2 class="Work-Exp"><i class="fa-solid fa-briefcase"></i>Work Experience</h2>
-                        <h3>Junior Front-End Developer</h3>
-                        <p class="Work-Data-Freela">
-                            Freelance
-                        </p>
-                        <p class="Work-Data">
-                            <span>São Paulo, SP - Brazil</span>
-                            <span class="Calendar">Feb 2020 - Mar 2021</span>
-                        </p>
+
+                        <div class="All-Experiences">
+                            <div class="slides">
+                                <input type="radio" name="radio-btn" id="Experience_1" checked>
+                                <input type="radio" name="radio-btn" id="Experience_2">
+                                <input type="radio" name="radio-btn" id="Experience_3">
+
+                                <div class="slide first">
+                                    <h3>Junior Front-End Developer</h3>
+                                    <p class="Work-Data-Freela">
+                                        Freelance
+                                    </p>
+                                    <p class="Work-Data">
+                                        <span>São Paulo, SP - Brazil</span>
+                                        <span class="Calendar">2020 - 2021</span>
+                                    </p>
+                                </div>
+                                <div class="slide">
+                                    <h3>Junior CLP Programmer III</h3>
+                                    <p class="Work-Data-Freela">INVENT Smart Intralogistics Solutions</p>
+                                    <p class="Work-Data">
+                                        <span>São Bernardo, SP - Brazil</span>
+                                        <span class="Calendar">2021 - 2023</span>
+                                    </p>
+                                </div>
+                                <div class="slide">
+                                    <h3>CLP Programmer</h3>
+                                    <p class="Work-Data-Freela">INVENT Smart Intralogistics Solutions</p>
+                                    <p class="Work-Data">
+                                        <span>São Bernardo, SP - Brazil</span>
+                                        <span class="Calendar">2023 - 2024</span>
+                                    </p>
+                                </div>
+
+                                <div class="navigation-auto">
+                                    <div class="auto-btn1"></div>
+                                    <div class="auto-btn2"></div>
+                                    <div class="auto-btn3"></div>
+                                </div>
+
+                                <div class="manual-navigation">
+                                    <label for="Experience_1" class="manual-btn"></label>
+                                    <label for="Experience_2" class="manual-btn"></label>
+                                    <label for="Experience_3" class="manual-btn"></label>
+                                </div>
+                            </div>
+                        </div>
                     </div>
             
                     <div class="Photo">
@@ -61,7 +105,13 @@
                 </div>
             </div>
         </div>
-    
+        
+        <div class="ScrollButton">
+            <a href="#"><button class="ScrollTop">
+                <i class="fa-solid fa-angles-up"></i>
+            </button></a>
+        </div>
+
         <div class="Skills">
             <div class="Skills-Align">
                 <h1 class="Skills-Title">Skills</h1>
@@ -391,6 +441,50 @@
             </div>
         </div>
 
+        <div class="Services-Page">
+            <div class="Services-Align">
+                <h1 class="Services-Title">Services</h1>
+            </div>
+
+            <div class="Services">
+                <div class="Top">
+                    <div class="Services-Left" data-anime="reveal">
+                        <a href="#ContactMe"><div class="Services-Left-Inside">
+                            <i class="fa-solid fa-code Icon-Services"></i>
+                            <h2>Web Development</h2>
+                            <p>Website development using HTML, CSS, JavaScript and API.</p>
+                        </div></a>
+                    </div>
+                    
+                    <div class="Services-Right" data-anime="reveal">
+                        <a href="#ContactMe"><div class="Services-Right-Inside">
+                            <i class="fa-solid fa-laptop Icon-Services"></i>
+                            <h2>Web Design</h2>
+                            <p>Development of layouts and structures for websites, using the Figma tool.</p>
+                        </div></a>
+                    </div>
+                </div>
+                
+                <div class="Bottom">
+                    <div class="Services-Left" data-anime="reveal">
+                        <a href="#ContactMe"><div class="Services-Left-Inside">
+                            <i class="fa-solid fa-mobile Icon-Services"></i>
+                            <h2>Responsive Web Design</h2>
+                            <p>Development of a website with responsive design for all devices.</p>
+                        </div></a>
+                    </div>
+                    
+                    <div class="Services-Right" data-anime="reveal">
+                        <a href="#ContactMe"><div class="Services-Right-Inside">
+                            <i class="fa-solid fa-magnifying-glass Icon-Services"></i>
+                            <h2>SEO</h2>
+                            <p>Techniques of SEO to improve the visibility of your website in search engine results.</p>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="Projects-Page">
             <div class="Projects-Align">
                 <h1 class="Projects-Title">Recent Projects</h1>
@@ -427,7 +521,7 @@
             </div>
         </div>
 
-        <div class="Contact-Page">
+        <div class="Contact-Page" id="ContactMe">
             <div class="Contact-Align">
                 <h1 class="Contact-Title">Contact me</h1>
             </div>

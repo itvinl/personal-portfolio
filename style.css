@@ -7,7 +7,8 @@
 }
 
 html {
-    background-color: #000000;
+    background-color: #000;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,11 +18,47 @@ body {
 }
 
 body::-webkit-scrollbar {
-    width: 0! important;
+    width: 0px! important;
 }
 
 .Unsupported-Device {
     display: none;
+}
+
+.ScrollTop i {
+    font-size: 19px;
+}
+
+.ScrollTop {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(180deg, #E6B980 0%, #806747 100%);
+    border: 1px solid #000;
+    border-radius: 5px;
+    right: 20px;
+    bottom: 13px;
+    box-shadow: 0 1px 6px 2px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    transform: translateY(20px);
+    transition: 0.8s;
+}
+
+.ScrollTop:hover {
+    background: linear-gradient(180deg, #d4ac77 0%, #5f4d35 100%);
+}
+
+.ScrollTop.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    transition-delay: 500ms;
 }
 
 .Main-Content {
@@ -144,7 +181,7 @@ body::-webkit-scrollbar {
 .Division {
     display: flex;
     justify-content: space-between;
-    margin-top: 17vh;
+    margin-top: 12vh;
 }
 
 .Borders {
@@ -160,8 +197,7 @@ body::-webkit-scrollbar {
     font-size: 18px;
     font-weight: 750;
     letter-spacing: -1px;
-    line-height: 50px;
-    margin-left: -2px;
+    margin: 17px 0 15px -2px;
     background: linear-gradient(180deg, #E6B980 0%, #806747 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -185,12 +221,12 @@ body::-webkit-scrollbar {
     width: 430px;
 }
 
-.Work-Exp {
+.Work-Exp, .Education-Cap {
     font-size: 17px;
-    margin-top: 8vh;
+    margin-top: 3vh;
 }
 
-.fa-briefcase {
+.fa-briefcase, .fa-graduation-cap {
     margin: 0 6px 0 3px;
     font-size: 16px;
 }
@@ -214,7 +250,100 @@ body::-webkit-scrollbar {
     -o-text-fill-color: transparent;
 }
 
-.Work-Data-Freela {
+.All-Experiences {
+    position: absolute;
+    width: 326px;
+    height: 85px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    position: relative;
+    transition: 3s ease-in-out;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 100%;
+    margin-left: 2.2px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 1px solid #806747;
+    padding: 2px;
+    margin-top: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 8px;
+}
+
+.manual-btn:hover {
+    background-color: #c9a170;
+}
+
+#Experience_1:checked ~ .first {
+    margin-left: 0;
+}
+
+#Experience_2:checked ~ .first {
+    margin-left: -27em;
+}
+
+#Experience_3:checked ~ .first {
+    margin-left: -54em;
+}
+
+.navigation-auto div {
+    border: 1px solid #806747;
+    padding: 2px;
+    border-radius: 10px;
+    margin-top: 11px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 100%;
+    margin-top: 60px;
+    margin-left: 2.2px;
+    border-top: 1px solid #806747;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 8px;
+}
+
+#Experience_1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #806747;
+}
+
+#Experience_2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #806747;
+}
+
+#Experience_3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #806747;
+}
+
+.Work-Data-Freela, .Education-Name {
     margin-left: 2px;
     font-weight: 350!important;
     font-size: 12px!important;
@@ -223,7 +352,7 @@ body::-webkit-scrollbar {
     letter-spacing: -0.5px!important;
 }
 
-.Work-Data {
+.Work-Data, .Education-Data {
     margin-left: 2px;
     font-weight: 350!important;
     font-size: 12px!important;
@@ -232,12 +361,15 @@ body::-webkit-scrollbar {
     letter-spacing: -0.5px!important;
     width: 75%!important;
     display: flex;
-    border-bottom: 1px solid #806747;
     padding-bottom: 5px;
     justify-content: space-between;
 }
 
-.Work-Data span {
+.Education-Data {
+    border: none;
+}
+
+.Work-Data span, .Education-Data span {
     width: auto;
 }
 
@@ -254,7 +386,6 @@ body::-webkit-scrollbar {
 }
 
 .Photo {
-    margin-top: -40px;
     width: 100%;
 }
 
@@ -273,11 +404,10 @@ body::-webkit-scrollbar {
 }
 
 .Skills-Align {
-    padding-top: 20vh;
-    margin-bottom: 10vh;
+    margin: 30vh 0 10vh 0;
 }
 
-.Skills-Title, .Projects-Title, .Contact-Title {
+.Skills-Title, .Services-Title, .Projects-Title, .Contact-Title {
     font-size: 33px;
     font-weight: 800;
     font-style: italic;
@@ -541,8 +671,94 @@ dialog {
     margin: 4px 2px 0 0;
 }
 
+.Services {
+    margin-top: 13vh;
+}
+
+.Services a {
+    text-decoration: none;
+}
+
+.Top {
+    display: flex;
+    justify-content: center;
+}
+
+.Bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Services-Align {
+    padding-top: 27vh;
+    margin-bottom: 10vh;
+}
+
+.Services-Left {
+    margin-right: 30px;
+}
+
+.Services-Left, .Services-Right {
+    box-sizing: border-box;
+    width: 330px;
+    height: 170px;
+    background: #000000;
+    border: 2px solid #806747;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.50);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.Services-Left:hover, .Services-Right:hover {
+    border: 2px solid #c9a170;
+}
+
+.Services-Left-Inside, .Services-Right-Inside {
+    height: 100%;
+    margin: 0 30px 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.Icon-Services {
+    font-size: 30px;
+    color: #806747;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.Services-Left:hover i, .Services-Right:hover i {
+    color: #c9a170;
+}
+
+.Services-Left-Inside h2, .Services-Right-Inside h2{
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 15px;
+    letter-spacing: -1px;
+    color: #F0F0F0;
+}
+
+.Services-Left-Inside p, .Services-Right-Inside p{
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -1px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 10px;
+}
+
+.Projects-Page {
+    margin-bottom: 30vh;
+}
+
 .Projects-Align {
-    padding-top: 30vh;
+    padding-top: 22vh;
     margin-bottom: 10vh;
 }
 
@@ -565,7 +781,7 @@ dialog {
     height: 248px;
     background: #000000;
     border: 2px solid #806747;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.50);
     margin-top: 13vh;
 }
 
@@ -644,7 +860,7 @@ dialog {
 }
 
 .Contact-Align {
-    padding-top: 35vh;
+    padding-top: 5vh;
     margin-bottom: 8vh;
 }
 
@@ -672,7 +888,7 @@ form label {
 
 form input, form textarea, form button {
     background: #000000;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.50), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
     padding: 10px 15px;
     border: 2px solid #806747;
@@ -739,10 +955,12 @@ form button:hover {
 }
 
 .Footer {
+    position: absolute;
     height: 56px;
     width: 100%;
     background: #000000;
     border-top: 2px solid #806747;
+    z-index: 10;
 }
 
 .Footer p {
@@ -822,6 +1040,10 @@ form button:hover {
     transition: 1s;
 }
 
+[data-anime="reveal"] {
+    scale: 0;
+}
+
 [data-anime="top"] {
     transform: translate3d(0, 100px, 0);
 }
@@ -840,6 +1062,7 @@ form button:hover {
 
 [data-anime].animate {
     opacity: 1;
+    scale: 1;
     transform: translate3d(0px, 0px, 0px);
 }
 
@@ -935,7 +1158,7 @@ form button:hover {
         margin: 0 auto;
     }
 
-    .Projects {
+    .Projects, .Services {
         display: flex;
         margin: 0;
         justify-content: center;
@@ -967,6 +1190,11 @@ form button:hover {
 
 @media (max-width: 837px) {
     /*Tablet*/
+    .ScrollButton {
+        display: none;
+        visibility: hidden;
+    }
+
     .Social-Medias i {
         font-size: 27px;
     }
@@ -979,13 +1207,14 @@ form button:hover {
         font-size: 27px;
     }
 
-    .About-Title, .Skills-Title, .Projects-Title, .Contact-Title {
+    .About-Title, .Skills-Title, .Services-Title, .Projects-Title, .Contact-Title {
         font-size: 30px;
     }
 
     .Informations h2 {
         font-size: 17px;
         line-height: 35px;
+        margin-bottom: 0px !important;
     }
 
     .Informations p {
@@ -997,11 +1226,11 @@ form button:hover {
         font-size: 15px;
     }
 
-    .Work-Data, .Work-Data-Freela {
+    .Work-Data, .Work-Data-Freela, .Education-Name, .Education-Data {
         font-size: 11.7px!important;
     }
 
-    .fa-briefcase {
+    .fa-briefcase, .fa-graduation-cap {
         font-size: 15px;
     }
 
@@ -1021,8 +1250,20 @@ form button:hover {
         margin: auto;
     }
 
-    .Work-Data {
+    .Work-Data, .Education-Data {
         width: 77%!important;
+    }
+
+    .All-Experiences {
+        width: 334px;
+    }
+
+    .navigation-auto div {
+        padding: 1.5px;
+    }
+    
+    .manual-btn {
+        padding: 1.5px;
     }
 
     .HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section {
@@ -1092,11 +1333,34 @@ form button:hover {
         font-size: 13px;
     }
 
-    .Projects-Align {
+    .Top, .Bottom {
+        display: block;
+        margin: 0;
+    }
+
+    .Services-Left, .Services-Right {
+        margin: 30px 0px 0px 0px;
+        width: 320px;
+        height: 160px;
+    }
+
+    .Icon-Services {
+        font-size: 28px;
+    }
+
+    .Services-Left-Inside h2, .Services-Right-Inside h2 {
+        font-size: 18px;
+    }
+
+    .Services-Left-Inside p, .Services-Right-Inside p {
+        font-size: 14px;
+    }
+
+    .Projects-Align, .Services-Align {
         margin-bottom: 11vh;
     }
 
-    .Projects {
+    .Projects, .Services {
         display: flex;
         margin: 0;
         justify-content: center;
@@ -1197,15 +1461,14 @@ form button:hover {
 
     .Division {
         display: block;
-        justify-content: center;
-        margin-top: 8vh;
+        margin-top: 4vh;
     }
 
     .Informations {
         margin: 0 40px;
     }
 
-    .About-Title, .Skills-Title, .Projects-Title, .Contact-Title {
+    .About-Title, .Skills-Title, .Services-Title, .Projects-Title, .Contact-Title {
         font-size: 25px;
     }
 
@@ -1226,7 +1489,7 @@ form button:hover {
         width: auto;
     }
     
-    .fa-briefcase {
+    .fa-briefcase, .fa-graduation-cap {
         font-size: 13px;
     }
 
@@ -1234,14 +1497,51 @@ form button:hover {
         font-size: 14px;
         line-height: 16px;
         margin-left: 0;
+        width: 57.5vw;
     }
 
-    .Work-Data-Freela {
+    .Work-Data-Freela, .Education-Name {
         font-size: 11px!important;
         margin-left: 0;
     }
 
+    .Work-Data-Freela {
+        width: auto !important;
+    }
+
+    .slide:not(.first) {
+        padding-left: 50px;
+    }
+
+    .navigation-auto {
+        margin-left: 1.3px;
+        margin-top: 50px;
+    }
+    
+    .manual-navigation {
+        margin-left: 1.3px;
+        margin-top: 60px;
+    }
+
+    #Experience_2:checked ~ .first {
+        margin-left: -17.1em;
+    }
+
+    #Experience_3:checked ~ .first {
+        margin-left: -34.3em;
+    }
+
+    .All-Experiences {
+        width: 58vw;
+    }
+
     .Work-Data {
+        font-size: 11px!important;
+        width: 57.6vw!important;
+        margin-left: 0;
+    }
+
+    .Education-Data {
         font-size: 11px!important;
         width: 75%!important;
         margin-left: 0;
@@ -1252,8 +1552,8 @@ form button:hover {
         margin-right: 0;
     }
 
-    .Work-Exp {
-        margin-top: 4vh;
+    .Work-Exp, .Education-Cap {
+        margin-top: 2vh;
     }
 
     .Data-Border {
@@ -1261,7 +1561,35 @@ form button:hover {
         margin-top: 8px;
     }
 
-    .Projects {
+    .Services-Align {
+        margin-bottom: 2vh;
+    }
+
+    .Icon-Services {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .Services-Left, .Services-Right {
+        width: 256px;
+        height: 140px;
+        margin: 20px 0px 0px 0px;
+    }
+
+    .Services-Left-Inside, .Services-Right-Inside {
+        margin: 0 20px 0 20px;
+    }
+
+    .Services-Left-Inside p, .Services-Right-Inside p {
+        font-size: 13px;
+        margin-top: 7px;
+    }
+
+    .Services-Left-Inside h2, .Services-Right-Inside h2 {
+        font-size: 16px;
+    }
+
+    .Projects, .Services {
         display: flex;
         margin: 0;
         justify-content: center;
@@ -1275,6 +1603,10 @@ form button:hover {
         width: 290px;
         height: 180px;
         margin-top: 0;
+    }
+
+    .Projects-Page {
+        margin-bottom: 13vh;
     }
 
     .Projects-Align {
@@ -1298,13 +1630,20 @@ form button:hover {
         font-weight: 500;
     }
 
+    .Left-Inside, .Right-Inside {
+        margin: 30px 23px;
+    }
+
+    .Left-Inside a, .Right-Inside a {
+        width: 74px;
+    }
+
     .Border {
         margin-left: 22px;
     }
 
     .Skills-Align {
-        padding-top: 8vh;
-        margin-bottom: 5vh;
+        margin: 15vh 0 5vh 0;
     }
 
     .line {
@@ -1393,16 +1732,8 @@ form button:hover {
         font-size: 10px;
     }
 
-    .Left-Inside, .Right-Inside {
-        margin: 30px 23px;
-    }
-
-    .Left-Inside a, .Right-Inside a {
-        width: 74px;
-    }
-
     .Contact-Align {
-        padding-top: 18vh;
+        padding-top: 5vh;
         margin-bottom: 5vh;
     }
 

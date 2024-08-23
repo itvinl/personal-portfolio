@@ -37,6 +37,21 @@ function showText(first_txt, second_txt, text_hello, text_im, set_interval_first
 showText(first_txt, second_txt, text_hello, text_im, set_interval_first, set_interval_second);
 
 
+// Remove text from border on scroll
+/*window.addEventListener('scroll', function() {
+    removeBorder();
+});
+
+function removeBorder() {
+    const positionscroll = window.scrollY;
+
+    if (positionscroll != 0) {
+        const border = document.querySelector(".Second-Txt");
+        border.classList.add("remove");
+    }
+};*/
+
+
 // Debounce of Lodash
 const debounce = function(func, wait, immediate) {
     let timeout;
@@ -123,16 +138,26 @@ function Snd_Msg() {
 }
 
 
-// Remove text from border on scroll
-/*window.addEventListener('scroll', function() {
-    removeBorder();
-});
+// Visible scroll top button
+window.addEventListener("scroll", function() {
+    const scrolltop = document.querySelector(".ScrollTop");
+    scrolltop.classList.toggle("active", window.scrollY > 600);
+})
 
-function removeBorder() {
-    const positionscroll = window.scrollY;
 
-    if (positionscroll != 0) {
-        const border = document.querySelector(".Second-Txt");
-        border.classList.add("remove");
+// Slider navigation auto
+let count = 1;
+document.getElementById("Experience_1").checked = true;
+
+setInterval( function(){
+    nextExperience();
+}, 8000);
+
+function nextExperience() {
+    count++;
+    if (count > 3) {
+        count = 1;
     }
-};*/
+
+    document.getElementById("Experience_"+count).checked = true;
+}
