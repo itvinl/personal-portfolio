@@ -267,7 +267,7 @@ body::-webkit-scrollbar {
 
 .slide {
     position: relative;
-    transition: 3s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .manual-navigation {
