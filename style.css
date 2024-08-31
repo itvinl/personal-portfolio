@@ -780,7 +780,7 @@ dialog {
     transition: 0.3s ease-in-out;
 }
 
-.Logotype_1, .Logotype_2 {
+.Clients a:not(:last-child) {
     margin-right: 100px;
 }
 
@@ -1200,7 +1200,7 @@ form button:hover {
         align-items: center;
     }
 
-    .Logotype_1, .Logotype_2 {
+    .Clients a:not(:last-child) {
         margin-right: 0px;
         margin-bottom: 40px;
     }
@@ -1454,7 +1454,7 @@ form button:hover {
         height: 40px;
     }
 
-    .Logotype_1, .Logotype_2 {
+    .Clients a:not(:last-child) {
         margin-bottom: 50px;
     }
 
@@ -1680,7 +1680,7 @@ form button:hover {
         margin-bottom: 8vh;
     }
 
-    .Logotype_1, .Logotype_2 {
+    .Clients a:not(:last-child) {
         margin-bottom: 50px;
     }
 
