@@ -770,9 +770,10 @@ dialog {
 .Projects, .Clients {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.Logotype_1, .Logotype_2, .Logotype_3 {
+.Logotype_1, .Logotype_3 {
     background: url("/assets/My_Logotype_White.png") no-repeat;
     background-size: 200px;
     width: 200px;
@@ -780,15 +781,30 @@ dialog {
     transition: 0.3s ease-in-out;
 }
 
+.Logotype_2 {
+    background: url("/assets/Lohana_Logotype_White.png") no-repeat;
+    background-size: 140px;
+    width: 137px;
+    height: 70px;
+    transition: 0.3s ease-in-out;
+}
+
 .Clients a:not(:last-child) {
     margin-right: 100px;
 }
 
-.Logotype_1:hover, .Logotype_2:hover, .Logotype_3:hover {
+.Logotype_1:hover, .Logotype_3:hover {
     background: url("/assets/My_Logotype.png") no-repeat;
     background-size: 200px;
     width: 200px;
     height: 50px;
+}
+
+.Logotype_2:hover {
+    background: url("/assets/Lohana_Logotype.png") no-repeat;
+    background-size: 140px;
+    width: 137px;
+    height: 70px;
 }
 
 .Project-Left {
