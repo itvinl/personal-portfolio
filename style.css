@@ -1458,16 +1458,28 @@ form button:hover {
         font-size: 17px;
     }
 
-    .Logotype_1, .Logotype_2, .Logotype_3 {
+    .Logotype_1, .Logotype_3 {
         background-size: 150px;
         width: 150px;
         height: 40px;
     }
 
-    .Logotype_1:hover, .Logotype_2:hover, .Logotype_3:hover {
+    .Logotype_2 {
+        background-size: 120px;
+        width: 120px;
+        height: 60px;
+    }
+
+    .Logotype_1:hover, .Logotype_3:hover {
         background-size: 150px;
         width: 150px;
         height: 40px;
+    }
+
+    .Logotype_2:hover {
+        background-size: 120px;
+        width: 120px;
+        height: 60px;
     }
 
     .Clients a:not(:last-child) {
