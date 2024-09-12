@@ -753,7 +753,11 @@ dialog {
     margin-top: 10px;
 }
 
-.Projects-Page, .Clients-Page {
+.Projects-Page {
+    margin-bottom: 25vh;
+}
+
+.Clients-Page {
     margin-bottom: 30vh;
 }
 
@@ -773,11 +777,12 @@ dialog {
     align-items: center;
 }
 
-.Logotype_1, .Logotype_3 {
-    background: url("/assets/My_Logotype_White.png") no-repeat;
-    background-size: 200px;
-    width: 200px;
-    height: 50px;
+.Logotype_1 {
+    background: url("/assets/KLAYNC_Logotype_White.png") no-repeat;
+    background-size: 160px;
+    width: 160px;
+    height: 52px;
+    opacity: 90%;
     transition: 0.3s ease-in-out;
 }
 
@@ -786,18 +791,30 @@ dialog {
     background-size: 140px;
     width: 137px;
     height: 70px;
+    opacity: 90%;
+    transition: 0.3s ease-in-out;
+}
+
+.Logotype_3 {
+    background: url("/assets/My_Logotype_White.png") no-repeat;
+    background-size: 200px;
+    width: 199px;
+    height: 43px;
+    opacity: 90%;
     transition: 0.3s ease-in-out;
 }
 
 .Clients a:not(:last-child) {
-    margin-right: 100px;
+    margin-right: 150px;
+    margin-left: 30px;
 }
 
-.Logotype_1:hover, .Logotype_3:hover {
-    background: url("/assets/My_Logotype.png") no-repeat;
-    background-size: 200px;
-    width: 200px;
-    height: 50px;
+.Logotype_1:hover {
+    background: url("/assets/KLAYNC_Logotype.png") no-repeat;
+    background-size: 160px;
+    width: 160px;
+    height: 52px;
+    opacity: 100%;
 }
 
 .Logotype_2:hover {
@@ -805,6 +822,15 @@ dialog {
     background-size: 140px;
     width: 137px;
     height: 70px;
+    opacity: 100%;
+}
+
+.Logotype_3:hover {
+    background: url("/assets/My_Logotype.png") no-repeat;
+    background-size: 200px;
+    width: 199px;
+    height: 43px;
+    opacity: 100%;
 }
 
 .Project-Left {
@@ -974,6 +1000,33 @@ input:-webkit-autofill, textarea:-webkit-autofill {
     font-style: italic;
     font-weight: 500;
     letter-spacing: -1px;
+}
+
+.Contt_Buttons {
+    display: flex;
+}
+
+.btn {
+    width: 100%;
+}
+
+.Contt_Buttons a {
+    margin-left: 10px;
+}
+
+.Wpp_Button {
+    padding: 0;
+}
+
+.Wpp_Button i {
+    font-size: 23px;
+    color: #806747;
+    padding: 6px 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.Wpp_Button i:hover {
+    color: #c9a170;
 }
 
 form button {
@@ -1218,7 +1271,8 @@ form button:hover {
 
     .Clients a:not(:last-child) {
         margin-right: 0px;
-        margin-bottom: 40px;
+        margin-bottom: 70px;
+        margin-left: 0px;
     }
 
     .Projects, .Services {
@@ -1458,9 +1512,9 @@ form button:hover {
         font-size: 17px;
     }
 
-    .Logotype_1, .Logotype_3 {
-        background-size: 150px;
-        width: 150px;
+    .Logotype_1 {
+        background-size: 130px;
+        width: 130px;
         height: 40px;
     }
 
@@ -1470,7 +1524,13 @@ form button:hover {
         height: 60px;
     }
 
-    .Logotype_1:hover, .Logotype_3:hover {
+    .Logotype_3 {
+        background-size: 150px;
+        width: 150px;
+        height: 40px;
+    }
+
+    .Logotype_1:hover {
         background-size: 150px;
         width: 150px;
         height: 40px;
@@ -1480,6 +1540,12 @@ form button:hover {
         background-size: 120px;
         width: 120px;
         height: 60px;
+    }
+
+    .Logotype_3:hover {
+        background-size: 150px;
+        width: 150px;
+        height: 40px;
     }
 
     .Clients a:not(:last-child) {
