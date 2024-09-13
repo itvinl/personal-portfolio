@@ -778,7 +778,7 @@ dialog {
 }
 
 .Logotype_1 {
-    background: url("/assets/KLAYNC_Logotype_White.png") no-repeat;
+    background: url("./assets/KLAYNC_Logotype_White.png") no-repeat;
     background-size: 160px;
     width: 160px;
     height: 52px;
@@ -787,7 +787,7 @@ dialog {
 }
 
 .Logotype_2 {
-    background: url("/assets/Lohana_Logotype_White.png") no-repeat;
+    background: url("./assets/Lohana_Logotype_White.png") no-repeat;
     background-size: 140px;
     width: 137px;
     height: 70px;
@@ -796,7 +796,7 @@ dialog {
 }
 
 .Logotype_3 {
-    background: url("/assets/My_Logotype_White.png") no-repeat;
+    background: url("./assets/My_Logotype_White.png") no-repeat;
     background-size: 200px;
     width: 199px;
     height: 43px;
@@ -810,7 +810,7 @@ dialog {
 }
 
 .Logotype_1:hover {
-    background: url("/assets/KLAYNC_Logotype.png") no-repeat;
+    background: url("./assets/KLAYNC_Logotype.png") no-repeat;
     background-size: 160px;
     width: 160px;
     height: 52px;
@@ -818,7 +818,7 @@ dialog {
 }
 
 .Logotype_2:hover {
-    background: url("/assets/Lohana_Logotype.png") no-repeat;
+    background: url("./assets/Lohana_Logotype.png") no-repeat;
     background-size: 140px;
     width: 137px;
     height: 70px;
@@ -826,7 +826,7 @@ dialog {
 }
 
 .Logotype_3:hover {
-    background: url("/assets/My_Logotype.png") no-repeat;
+    background: url("./assets/My_Logotype.png") no-repeat;
     background-size: 200px;
     width: 199px;
     height: 43px;
