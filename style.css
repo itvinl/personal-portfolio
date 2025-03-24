@@ -1255,6 +1255,8 @@ form button:hover {
 
     .Division {
         justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .Informations {
@@ -1262,7 +1264,14 @@ form button:hover {
     }
 
     .Photo {
-        display: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .Photo img {
+        max-width: 180px;
+        max-height: 230px;
     }
 
     .Informations-Align i {
@@ -1382,7 +1391,14 @@ form button:hover {
     }
 
     .Photo {
-        display: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
+    .Photo img {
+        max-width: 160px;
+        max-height: 210px;
     }
 
     .Borders {
@@ -1391,6 +1407,8 @@ form button:hover {
 
     .Division {
         justify-content: center;
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .Informations {
@@ -1643,7 +1661,14 @@ form button:hover {
     }
 
     .Photo {
-        display: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .Photo img {
+        max-width: 130px;
+        max-height: 155px;
     }
 
     .Borders {
@@ -1651,8 +1676,10 @@ form button:hover {
     }
 
     .Division {
-        display: block;
+        display: flex;
         margin-top: 4vh;
+        justify-content: center;
+        flex-direction: column-reverse;
     }
 
     .Informations {
