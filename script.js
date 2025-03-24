@@ -95,7 +95,7 @@ if (target.length) {
 
 // Modal Informations
 const ValButtons = document.querySelectorAll(".Info-Modal");
-const Modal_Array = [".html_modal", ".css_modal", ".js_modal", ".ts_modal", ".py_modal", ".nodejs_modal", ".bs_modal", ".jq_modal", ".react_modal", ".vite_modal", ".tw_modal",".dj_modal"];
+const Modal_Array = [".html_modal", ".css_modal", ".js_modal", ".ts_modal", ".py_modal", ".nodejs_modal", ".bs_modal", ".jq_modal", ".react_modal", ".vite_modal", ".tw_modal",".dj_modal",".php_modal",".mysql_modal"];
 
 ValButtons.forEach(function(AllClicks) {
     AllClicks.onclick = function () {
@@ -114,6 +114,8 @@ ValButtons.forEach(function(AllClicks) {
             case "vite": const modal_vite = document.querySelector(Modal_Array[9]);modal_vite.showModal(); break;
             case "tw": const modal_tw = document.querySelector(Modal_Array[10]);modal_tw.showModal(); break;
             case "dj": const modal_dj = document.querySelector(Modal_Array[11]); modal_dj.showModal(); break;
+            case "php": const modal_php = document.querySelector(Modal_Array[12]); modal_php.showModal(); break;
+            case "sql": const modal_mysql = document.querySelector(Modal_Array[13]); modal_mysql.showModal(); break;
             default: console.log("Error!! Please reload the page.");
         }
 
@@ -122,7 +124,7 @@ ValButtons.forEach(function(AllClicks) {
 });
 
 function CloseBtn() {
-    for(let i = 0; i < 12; i++){
+    for(let i = 0; i < 14; i++){
         const CloseButtons = document.querySelector(Modal_Array[i]);
         
         CloseButtons.close();
