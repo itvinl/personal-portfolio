@@ -9,3 +9,4 @@ This project is **My Personal Portfolio** with some information, experiences, sk
 - JavaScript
 - Responsive Design
 - Static Forms API.
+- Icons Library (Font Awesome and DEVICON)
