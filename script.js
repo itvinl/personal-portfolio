@@ -149,7 +149,22 @@ window.addEventListener("scroll", function() {
 
 // Slider navigation auto
 let count = 1;
-document.getElementById("Experience_1").checked = true;
+
+const radioSlides = document.querySelectorAll(".radio-slides");
+
+radioSlides.forEach(function(radioClicks) {
+    radioClicks.onclick = function () {
+        const radioIdInfo = radioClicks.id;
+
+        switch (radioIdInfo) {
+            case "Experience_1": count = 1; break;
+            case "Experience_2": count = 2; break;
+            case "Experience_3": count = 3; break;
+            case "Experience_4": count = 4; break;
+            case "Experience_5": count = 5; break;
+        }
+    }
+})
 
 setInterval( function(){
     nextExperience();
@@ -157,7 +172,7 @@ setInterval( function(){
 
 function nextExperience() {
     count++;
-    if (count > 4) {
+    if (count > 5) {
         count = 1;
     }
 

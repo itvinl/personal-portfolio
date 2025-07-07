@@ -312,6 +312,10 @@ body::-webkit-scrollbar {
     margin-left: -81em;
 }
 
+#Experience_5:checked ~ .first {
+    margin-left: -108em;
+}
+
 .navigation-auto div {
     border: 1px solid #806747;
     padding: 2px;
@@ -348,6 +352,10 @@ body::-webkit-scrollbar {
 }
 
 #Experience_4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: #806747;
+}
+
+#Experience_5:checked ~ .navigation-auto .auto-btn5 {
     background-color: #806747;
 }
 
@@ -1747,6 +1755,10 @@ form button:hover {
 
     #Experience_4:checked ~ .first {
         margin-left: -67.5em;
+    }
+
+    #Experience_5:checked ~ .first {
+        margin-left: -90.1em;
     }
 
     .All-Experiences {
