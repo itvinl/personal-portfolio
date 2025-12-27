@@ -52,6 +52,66 @@ function removeBorder() {
 };*/
 
 
+// Profession typing automatically
+const role_txt = document.querySelector(".Role-Txt");
+const roles_list = ["PLC Programmer </>", "Full-Stack Developer </>", "UX/UI Designer </>"];
+
+const time_write = 100;
+const time_delete = 50;
+const time_wait = 2000;
+
+cycleRoles(role_txt, roles_list, time_write, time_delete, time_wait);
+
+function cycleRoles(element, text_list, interval_write, interval_delete, wait_time) {
+    let current_index = 0;
+
+    function startWriting() {
+        const current_text = text_list[current_index];
+        const chars_to_write = current_text.split("").reverse();
+
+        const writing = setInterval(() => {
+            if (!chars_to_write.length) {
+                clearInterval(writing);
+                setTimeout(startDeleting, wait_time);
+                return;
+            }
+
+            const letter = chars_to_write.pop();
+            
+            element.textContent += letter; 
+
+        }, interval_write);
+    }
+
+    function startDeleting() {
+        const chars_on_screen = element.textContent.split("");
+
+        const deleting = setInterval(() => {
+            if (!chars_on_screen.length) {
+                clearInterval(deleting);
+                
+                current_index++;
+
+                if (current_index >= text_list.length) {
+                    current_index = 0;
+                }
+
+                startWriting();
+                return;
+            }
+
+            chars_on_screen.pop();
+            element.textContent = chars_on_screen.join("");
+
+        }, interval_delete);
+    }
+
+    if (element) {
+        startWriting();
+    }
+}
+
+
 // Debounce of Lodash
 const debounce = function(func, wait, immediate) {
     let timeout;

@@ -21,6 +21,17 @@ body::-webkit-scrollbar {
     width: 0px! important;
 }
 
+.Role-Txt {
+    border-right: 2px solid #f0bf6c;
+    padding-right: 5px;
+    animation: blink-cursor 0.75s step-end infinite;
+}
+
+@keyframes blink-cursor {
+    from, to { border-color: transparent; }
+    50% { border-color: #806747; }
+}
+
 .Unsupported-Device {
     display: none;
 }
