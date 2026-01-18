@@ -155,27 +155,34 @@ if (target.length) {
 
 // Modal Informations
 const ValButtons = document.querySelectorAll(".Info-Modal");
-const Modal_Array = [".html_modal", ".css_modal", ".js_modal", ".ts_modal", ".py_modal", ".nodejs_modal", ".bs_modal", ".jq_modal", ".react_modal", ".vite_modal", ".tw_modal",".dj_modal",".php_modal",".mysql_modal"];
+const Modal_Array = [".tia_modal", ".asi_modal", ".asimon_modal", ".html_modal", ".css_modal", ".js_modal", ".ts_modal", ".py_modal", ".nodejs_modal", ".bs_modal", ".jq_modal", ".react_modal", ".vite_modal", ".tw_modal",".dj_modal",".php_modal",".mysql_modal", ".gitgithub_modal", ".wordpress_modal", ".photoshop_modal", ".figma_modal"];
 
 ValButtons.forEach(function(AllClicks) {
     AllClicks.onclick = function () {
         const SkillsName = AllClicks.firstChild.classList[2];
 
         switch (SkillsName) {
-            case "html": const modal_html = document.querySelector(Modal_Array[0]); modal_html.showModal(); break;
-            case "css": const modal_css = document.querySelector(Modal_Array[1]); modal_css.showModal(); break;
-            case "js": const modal_js = document.querySelector(Modal_Array[2]); modal_js.showModal(); break;
-            case "ts": const modal_ts = document.querySelector(Modal_Array[3]); modal_ts.showModal(); break;
-            case "py": const modal_py = document.querySelector(Modal_Array[4]); modal_py.showModal(); break;
-            case "nodejs": const modal_nodejs = document.querySelector(Modal_Array[5]); modal_nodejs.showModal(); break;
-            case "bs": const modal_bs = document.querySelector(Modal_Array[6]); modal_bs.showModal(); break;
-            case "jq": const modal_jq = document.querySelector(Modal_Array[7]); modal_jq.showModal(); break;
-            case "react": const modal_react = document.querySelector(Modal_Array[8]); modal_react.showModal(); break;
-            case "vite": const modal_vite = document.querySelector(Modal_Array[9]);modal_vite.showModal(); break;
-            case "tw": const modal_tw = document.querySelector(Modal_Array[10]);modal_tw.showModal(); break;
-            case "dj": const modal_dj = document.querySelector(Modal_Array[11]); modal_dj.showModal(); break;
-            case "php": const modal_php = document.querySelector(Modal_Array[12]); modal_php.showModal(); break;
-            case "sql": const modal_mysql = document.querySelector(Modal_Array[13]); modal_mysql.showModal(); break;
+            case "tia": const modal_tia = document.querySelector(Modal_Array[0]); modal_tia.showModal(); break;
+            case "asi": const modal_asi = document.querySelector(Modal_Array[1]); modal_asi.showModal(); break;
+            case "asimon": const modal_asimon = document.querySelector(Modal_Array[2]); modal_asimon.showModal(); break;
+            case "html": const modal_html = document.querySelector(Modal_Array[3]); modal_html.showModal(); break;
+            case "css": const modal_css = document.querySelector(Modal_Array[4]); modal_css.showModal(); break;
+            case "js": const modal_js = document.querySelector(Modal_Array[5]); modal_js.showModal(); break;
+            case "ts": const modal_ts = document.querySelector(Modal_Array[6]); modal_ts.showModal(); break;
+            case "py": const modal_py = document.querySelector(Modal_Array[7]); modal_py.showModal(); break;
+            case "nodejs": const modal_nodejs = document.querySelector(Modal_Array[8]); modal_nodejs.showModal(); break;
+            case "bs": const modal_bs = document.querySelector(Modal_Array[9]); modal_bs.showModal(); break;
+            case "jq": const modal_jq = document.querySelector(Modal_Array[10]); modal_jq.showModal(); break;
+            case "react": const modal_react = document.querySelector(Modal_Array[11]); modal_react.showModal(); break;
+            case "vite": const modal_vite = document.querySelector(Modal_Array[12]);modal_vite.showModal(); break;
+            case "tw": const modal_tw = document.querySelector(Modal_Array[13]);modal_tw.showModal(); break;
+            case "dj": const modal_dj = document.querySelector(Modal_Array[14]); modal_dj.showModal(); break;
+            case "php": const modal_php = document.querySelector(Modal_Array[15]); modal_php.showModal(); break;
+            case "sql": const modal_mysql = document.querySelector(Modal_Array[16]); modal_mysql.showModal(); break;
+            case "gitgithub": const modal_gitgithub = document.querySelector(Modal_Array[17]); modal_gitgithub.showModal(); break;
+            case "wordpress": const modal_wordpress = document.querySelector(Modal_Array[18]); modal_wordpress.showModal(); break;
+            case "photoshop": const modal_photoshop = document.querySelector(Modal_Array[19]); modal_photoshop.showModal(); break;
+            case "figma": const modal_figma = document.querySelector(Modal_Array[20]); modal_figma.showModal(); break;
             default: console.log("Error!! Please reload the page.");
         }
 
@@ -183,12 +190,14 @@ ValButtons.forEach(function(AllClicks) {
     }
 });
 
+
+// Close modal function
 function CloseBtn() {
-    for(let i = 0; i < 14; i++){
-        const CloseButtons = document.querySelector(Modal_Array[i]);
-        
-        CloseButtons.close();
-    }
+    const openModals = document.querySelectorAll('dialog[open]');
+
+    openModals.forEach(modal => {
+        modal.close();
+    });
 
     document.body.style.overflow = null;
 }
@@ -202,8 +211,12 @@ function Snd_Msg() {
 
 // Visible scroll top button
 window.addEventListener("scroll", function() {
-    const scrolltop = document.querySelector(".ScrollTop");
-    scrolltop.classList.toggle("active", window.scrollY > 600);
+    const scrollTop = document.querySelector(".ScrollTop");
+    const footer = document.querySelector(".Footer");
+    
+    const screenBottom = window.scrollY + window.innerHeight;
+
+    scrollTop.classList.toggle("active", window.scrollY > 300 && screenBottom < (footer.offsetTop - 50));
 })
 
 

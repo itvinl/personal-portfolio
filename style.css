@@ -70,6 +70,7 @@ body::-webkit-scrollbar {
     visibility: visible;
     transform: translateY(0px);
     transition-delay: 500ms;
+    z-index: 0;
 }
 
 .Main-Content {
@@ -560,6 +561,11 @@ dialog {
     margin: 0 100% 60px 100%;
 }
 
+.dialog_icon {
+    width: 200px; 
+    margin-bottom: 60px;
+}
+
 .Line-Mobile {
     display: none;
 }
@@ -568,7 +574,7 @@ dialog {
     margin-bottom: 30px;
 }
 
-.HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section, .PHP-Section, .MYSQL-Section {
+.TIA-Section, .ASI-Section, .ASIMON-Section, .HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section, .PHP-Section, .MYSQL-Section, .Git_GitHub-Section, .WordPress-Section, .Photoshop-Section, .Figma-Section {
     margin: 0px 20px;
     width: 56px;
     height: 58px;
@@ -578,7 +584,40 @@ dialog {
     z-index: 1;
 }
 
+.Full {
+    width: 100%;
+    height: 100%;
+}
+
+.Full:hover {
+    --cor-inicio: #D9D9D9;
+    --cor-fim: #D9D9D9;
+}
+
 /* First Line Skills */
+
+.tia_svg stop, .asi_svg stop, .asimon_svg stop {
+    transition: stop-color 0.2s linear;
+}
+
+.Info-Modal:hover .tia_svg stop, .Info-Modal:hover .asi_svg stop, .Info-Modal:hover .asimon_svg stop {
+    stop-color: #D9D9D9; 
+}
+
+.tia_svg {
+    width: 60%;
+    height: 100%;
+}
+
+.asi_svg {
+    width: 75%;
+    height: 100%;
+}
+
+.asimon_svg {
+    width: 90%;
+    height: 100%;
+}
 
 .html {
     font-size: 50px;
@@ -620,6 +659,8 @@ dialog {
     justify-content: center;
 }
 
+/* Second Line Skills */
+
 .py {
     font-size: 48px;
     width: 100%;
@@ -637,8 +678,6 @@ dialog {
     align-items: center;
     justify-content: center;
 }
-
-/* Second Line Skills */
 
 .bs {
     font-size: 37px;
@@ -685,6 +724,8 @@ dialog {
     justify-content: center;
 }
 
+/* Third Line Skills */
+
 .dj {
     font-size: 37px;
     width: 100%;
@@ -716,6 +757,35 @@ dialog {
     justify-content: center;
 }
 
+.git_github_svg stop, .wordpress_svg stop, .photoshop_svg stop, .photoshop_svg stop, .figma_svg stop {
+    transition: stop-color 0.2s linear;
+}
+
+.Info-Modal:hover .git_github_svg stop, .Info-Modal:hover .wordpress_svg stop, .Info-Modal:hover .photoshop_svg stop, .Info-Modal:hover .figma_svg stop {
+    stop-color: #D9D9D9; 
+}
+
+.git_github_svg {
+    width: 70%;
+    height: 100%;
+}
+
+.wordpress_svg {
+    width: 60%;
+    height: 100%;
+}
+
+.photoshop_svg {
+    width: 60%;
+    height: 100%;
+}
+
+.figma_svg {
+    width: 45%;
+    height: 100%;
+    margin-left: 1px;
+}
+
 .Services {
     margin-top: 13vh;
 }
@@ -729,7 +799,7 @@ dialog {
     justify-content: center;
 }
 
-.Bottom {
+.Center, .Bottom {
     display: flex;
     justify-content: center;
     margin-top: 30px;
@@ -773,12 +843,14 @@ dialog {
 .Icon-Services {
     font-size: 30px;
     color: #806747;
+    fill: #806747;
     margin-bottom: 20px;
     transition: all 0.3s ease-in-out;
 }
 
-.Services-Left:hover i, .Services-Right:hover i {
+.Services-Left:hover i, .Services-Left:hover svg, .Services-Right:hover i, .Services-Right:hover svg {
     color: #c9a170;
+    fill: #c9a170;
 }
 
 .Services-Left-Inside h2, .Services-Right-Inside h2{
@@ -1094,6 +1166,8 @@ form button:hover {
 
 .Footer {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     height: 56px;
     width: 100%;
     background: #000000;
@@ -1107,8 +1181,23 @@ form button:hover {
     font-size: 12px;
     line-height: 15px;
     color: rgba(230, 185, 128, 0.4);
-    padding: 21px 30px;
-    position: absolute;
+}
+
+.Social-Vinicius {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Copyright {
+    padding: 0 30px;
+    margin: auto 0;
+    width: 900px;
+}
+
+.Vinicius-Programmer {
+    padding: 5px 30px 0 30px;
+    margin: auto 0;
 }
 
 .Social-Medias-Footer {
@@ -1152,7 +1241,7 @@ form button:hover {
     -o-text-fill-color: transparent;
 }
 
-.HTML-Section:hover, .CSS-Section:hover, .JS-Section:hover, .TS-Section:hover, .PY-Section:hover, .NODEJS-Section:hover, .BS-Section:hover, .JQ-Section:hover, .REACT-Section:hover, .VITE-Section:hover, .TW-Section:hover, .DJ-Section:hover, .PHP-Section:hover, .MYSQL-Section:hover {
+.TIA-Section:hover, .ASI-Section:hover, .ASIMON-Section:hover, .HTML-Section:hover, .CSS-Section:hover, .JS-Section:hover, .TS-Section:hover, .PY-Section:hover, .NODEJS-Section:hover, .BS-Section:hover, .JQ-Section:hover, .REACT-Section:hover, .VITE-Section:hover, .TW-Section:hover, .DJ-Section:hover, .PHP-Section:hover, .MYSQL-Section:hover, .Git_GitHub-Section:hover, .WordPress-Section:hover, .Photoshop-Section:hover, .Figma-Section:hover {
     background: linear-gradient(180deg, #FFD196 0%, #866C4B 100%);
     transition: .2s linear;
 }
@@ -1297,6 +1386,10 @@ form button:hover {
         font-size: 180px;
     }
 
+    .dialog_icon {
+        width: 180px;
+    }
+
     .Informations-Align p {
         font-size: 14px;
     }
@@ -1356,6 +1449,34 @@ form button:hover {
 
     .Left-Inside h3:hover::after, .Right-Inside h3:hover::after{
         width: 0px;
+    }
+
+    .Vinicius-Programmer {
+        padding: 5px 0 0 0;
+    }
+
+    .Social-Medias-Footer {
+        padding: 0;
+    }
+
+    .Social-Medias-Footer a:first-child {
+        margin-left: 0px;
+    }
+
+    .Social-Vinicius {
+        margin: 15px 0 25px 0;
+        max-width: 372px;
+    }
+
+    .Footer {
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .Copyright {
+        width: auto;
+        margin-bottom: 15px;
     }
 }
 
@@ -1450,7 +1571,7 @@ form button:hover {
         padding: 1.5px;
     }
 
-    .HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section, .PHP-Section, .MYSQL-Section {
+    .TIA-Section, .ASI-Section, .ASIMON-Section, .HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section, .PHP-Section, .MYSQL-Section, .Git_GitHub-Section, .WordPress-Section, .Photoshop-Section, .Figma-Section  {
         margin: 0px 15px 10px 15px;
         width: 54px;
         height: 54px;
@@ -1517,11 +1638,15 @@ form button:hover {
         font-size: 150px;
     }
 
+    .dialog_icon {
+        width: 150px;
+    }
+
     .Informations-Align p {
         font-size: 13px;
     }
 
-    .Top, .Bottom {
+    .Top, .Center, .Bottom {
         display: block;
         margin: 0;
     }
@@ -1639,13 +1764,25 @@ form button:hover {
         font-size: 11.5px;
     }
 
+    .fa-github, .fa-linkedin-square, .fa-figma, .fa-facebook {
+        padding-top: 0px !important;
+    }
+
     .Social-Medias-Footer i {
         font-size: 22px!important;
     }
 
     .Social-Medias-Footer {
         justify-content: right;
-        padding: 8px 15px 0 0;
+        align-items: center;
+    }
+
+    .Social-Vinicius {
+        max-width: 357px;
+    }
+
+    .Vinicius-Programmer img {
+        width: 120px;
     }
 
     /* Error 404 */
@@ -1918,7 +2055,7 @@ form button:hover {
         margin: 0 10%;
     }
 
-    .HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section, .PHP-Section, .MYSQL-Section {
+    .TIA-Section, .ASI-Section, .ASIMON-Section, .HTML-Section, .CSS-Section, .JS-Section, .TS-Section, .PY-Section, .NODEJS-Section, .BS-Section, .JQ-Section, .REACT-Section, .VITE-Section, .TW-Section, .DJ-Section, .PHP-Section, .MYSQL-Section, .Git_GitHub-Section, .WordPress-Section, .Photoshop-Section, .Figma-Section {
         margin: 0px 10px 20px 10px;
         width: 49px;
         height: 49px;
@@ -1985,8 +2122,13 @@ form button:hover {
         font-size: 100px;
     }
 
+    .dialog_icon {
+        width: 100px;
+    }
+
     .Informations-Align p {
         font-size: 10px;
+        word-break: break-all;
     }
 
     .Contact-Align {
@@ -2040,7 +2182,6 @@ form button:hover {
     }
 
     .Footer {
-        height: 90px;
         display: flex;
         flex-direction: column-reverse;
     }
@@ -2050,8 +2191,16 @@ form button:hover {
         padding: 8px 0px 0 0;
     }
 
+    .Social-Vinicius {
+        max-width: 340px;
+    }
+
+    .Vinicius-Programmer img {
+        width: 110px;
+    }
+
     .Social-Medias-Footer i {
-        font-size: 22px!important;
+        font-size: 20px!important;
     }
 
     .Footer p {
@@ -2059,7 +2208,7 @@ form button:hover {
         display: flex;
         justify-content: center;
         font-size: 11px;
-        padding: 15px 30px;
+        text-align: center;
     }
 
     /* Error 404 */
@@ -2076,6 +2225,12 @@ form button:hover {
         font-size: 10px;
         width: 70px;
         height: 24px;
+    }
+}
+
+@media (max-width: 401px) {
+    .Social-Vinicius {
+        max-width: 290px;
     }
 }
 
