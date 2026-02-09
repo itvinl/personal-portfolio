@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
     visibility: visible;
     transform: translateY(0px);
     transition-delay: 500ms;
-    z-index: 0;
+    z-index: 10;
 }
 
 .Main-Content {
